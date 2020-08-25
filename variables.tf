@@ -13,10 +13,12 @@ variable "rke_nodes" {
 variable "rke" {
   type = object({
     cluster_name = string
+    dind = bool
     kubernetes_version = string
   })
   default = {
     cluster_name = "rancher-server"
+    dind = false
     kubernetes_version = ""
   }
   description = "RKE configuration"

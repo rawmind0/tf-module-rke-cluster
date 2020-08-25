@@ -1,6 +1,7 @@
 # Provision RKE cluster on provided infrastructure
 resource "rke_cluster" "rancher_cluster" {
   cluster_name = var.rke.cluster_name
+  dind = var.rke.dind
 
   dynamic nodes {
     for_each = var.rke_nodes

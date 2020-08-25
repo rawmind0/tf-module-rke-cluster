@@ -30,6 +30,7 @@ variable "rke_nodes" {
 variable "rke" {
   default = {
     cluster_name = "rancher-server"
+    dind = false
     kubernetes_version = "" 
   }
   description = "RKE configuration"
